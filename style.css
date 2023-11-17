@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+*{margin:0;padding:0;font-family:'Noto Sans KR', sans-serif}
+li{list-style:none}
+button{cursor:pointer}
+.box__container{position:relative;height:100vh;background:url(./bg.jpg) no-repeat 50% 0;background-size:cover}
+.box__order{position:absolute;top:50%;left:50%;text-align:center;transform:translate(-50%, -50%)}
+.box__order .button__order{width:270px;height:54px;margin:30px;border:2px solid saddlebrown;border-radius:15px;font-size:25px;background:#f5f5f5;color:saddlebrown;transition:all 0.2s}
+.box__order .button__order:hover{background:saddlebrown;color:#f5f5f5;transform:scale(1.2)}
+
+.box__work{display:none}
+.box__work--active{display:block;height:100vh;background:beige}
+.box__work .text__order{display:block;padding:30px;background:saddlebrown;font-size:30px;color:#fff;text-align:center}
+.box__receipt{margin:30px}
+.box__receipt .text__title{display:block;padding:20px;font-size:30px;text-align:center}
+.box__receipt .list__receipt{display:flex;flex-wrap:wrap;width:100%;gap:20px;font-size:0}
+.box__receipt .list__receipt .list-item{display:grid;flex-grow:1;width:calc(33.33% - 30px);height:170px;border:2px solid saddlebrown;border-radius:30px;font-size:22px;text-align:center}
+
+.box__receipt .list__receipt .list-item .text__menu{display:block;padding-top:20px;font-weight:bold}
+.box__receipt .list__receipt .list-item .text__receipt{font-size:18px}
+
+.box__kitchen .list__ingredient{width:90%;margin:0 auto;font-size:0;text-align:center}
+.box__kitchen .list__ingredient .list-item{display:inline-block;width:31%;vertical-align:top}
+.box__kitchen .list__ingredient .list-item + .list-item{margin-left:10px}
+.box__kitchen .list__ingredient .list-item .button__ingredient{max-width:270px;width:100%;height:50px;border:2px solid saddlebrown;border-radius:15px;background:#f5f5f5;font-size:18px;color:saddlebrown}
+
+.button__complete{display:block;width:320px;height:60px;margin:20px auto 0;border:1px solid saddlebrown;border-radius:15px;background:saddlebrown;font-size:30px;color:#fff}
+.box__customer{display:none;position:absolute;top:50%;left:50%;width:500px;height:300px;border-radius:40px;background:rgba(0, 0, 0, 0.7);transform:translate(-50%, -50%)}
+.box__customer .text__comment{position:absolute;top:50%;left:50%;width:100%;font-size:34px;color:#fff;text-align:center;transform:translate(-50%, -50%)}
+.button__reset{display:none;width:100%;border:none;background:transparent;font-size:30px;font-weight:500;color:aliceblue;animation:blink 1s infinite alternate}
+.button__reset--active{display:block}
+
+@keyframes blink{
+    0%{
+        transform:translate(0, 0);
+    }
+    100%{
+        transform:translate(0, 20px);
+    }
+}
+
+@media (max-width: 425px){
+    .box__receipt{margin:30px 20px}
+    .box__receipt .list__receipt{gap:10px}
+    .box__receipt .list__receipt .list-item{width:calc(33.33% - 20px);border-radius:20px}
+    .box__receipt .list__receipt .list-item .text__receipt,
+    .box__kitchen .list__ingredient .list-item .button__ingredient{font-size:16px}
+}

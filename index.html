@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>카페알바 게임</title>
+    </head>
+    <body>
+        <div class="box__container">
+            <div class="box__order">
+                <button type="button" class="button__order">주문받기 ☕</button>
+            </div>
+            <div class="box__work">
+                <p class="text__order">메뉴 : <span class="text__menu">아메리카노</span></p>
+                <div class="box__receipt">
+                    <strong class="text__title">Receipt 👩🏻‍🍳</strong>
+                    <ul class="list__receipt">
+                        <li class="list-item">
+                            <span class="text__menu">에스프레소 ☕</span>
+                            <span class="text__receipt">에스프레소 2샷</span>
+                        </li>
+                        <li class="list-item">
+                            <span class="text__menu">아메리카노 ☕</span>
+                            <span class="text__receipt">에스프레소 2샷</span>
+                            <span class="text__receipt">물 1컵</span>
+                        </li>
+                        <li class="list-item">
+                            <span class="text__menu">카페라떼 🥛</span>
+                            <span class="text__receipt">에스프레소 2샷</span>
+                            <span class="text__receipt">우유 1컵</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box__kitchen">
+                    <ul class="list__ingredient">
+                        <li class="list-item">
+                            <button class="button__ingredient" id="espresso">에스프레소 1샷</button>
+                        </li>
+                        <li class="list-item">
+                            <button class="button__ingredient" id="water">물 1컵</button>
+                        </li>
+                        <li class="list-item">
+                            <button class="button__ingredient" id="milk">우유 1컵</button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="button__complete">제조 완료</button>
+            </div>
+            <div class="box__customer">
+                <p class="text__comment"></p>
+                <button type="button" class="button__reset" onclick="window.location.reload()">다시하기 👻</button>
+            </div>
+        </div>
+    <script src="main.js"></script>
+    </body>
+</html>
